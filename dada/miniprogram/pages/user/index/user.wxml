@@ -1,0 +1,78 @@
+<view class="infoBox">
+ <label class="login">
+        <button  bindtap="tologin" wx:if="{{!userInfo}}"></button>
+        <image class="headImg" src="{{userInfo.avatarUrl||'../../../images/icon/common/head.png'}}"></image>
+        <view class="userName">{{userInfo.nickName||'点击登录'}}</view>
+        <image  class="editIcon" src="../../../images/icon/other/i9.png"></image>
+ </label>
+        
+    <view class="codeWord" catchtap="showQrCode">
+        <image src="../../../images/btn/kf.png"></image>
+        <view style="color: #333;font-size: 22rpx;margin-top: 15rpx;">抽赏官</view>
+    </view>
+</view>
+<view class="openid" wx:if="{{userInfo}}">Uid：{{userInfo._openid}} 
+    <view catchtap="copyOpenId" class="copyBtn" data-no="{{userInfo._openid}}">
+    复制
+    </view>
+</view>
+<view class="balanceBox0">
+    <view class="balanceBox">
+    <view class="balanceLabel">余额（元）</view>
+    <view class="balanceInfo">
+        <view class="balanceMoney">￥<text>{{userInfo.canUseAmount||0}}</text>
+        </view>
+        <view catchtap="gotoBalanceRecord" class="balanceDetailBtn">查看明细</view>
+    </view>
+    <!-- <view catchtap="showWithdrawalDialog" class="WithdrawalBtn">退款</view> -->
+    <view catchtap="showRechargeDialog" class="RechargeBtn">充值</view>
+</view>
+</view>
+<view class="virtualBox">
+    <view catchtap="gotoCoinRecord" class="virtualBlock">
+        <image class="virtualIcon" src="../../../images/icon/pay/i4.png"></image>
+        <view class="virtualLabel">DD币</view>
+        <view class="virtualNum">
+            <text>{{userInfo.coin||0}}</text>个可用
+        </view>
+    </view>
+    <view catchtap="gotoCouponList" class="virtualBlock">
+        <image class="virtualIcon2" src="../../../images/icon/pay/i5.png"></image>
+        <view class="virtualLabel">DD券</view>
+        <view class="virtualNum">
+            <text>{{userInfo.ticket||0}}</text>张可用
+        </view>
+    </view>
+</view>
+<view class="recordsBox">
+    <view catchtap="gotoCostRecord" class="record">
+        <view class="recordword">消费记录</view>
+        <image class="recordar" src="../../../images/icon/common/ar1.png"></image>
+    </view>
+    <view catchtap="gotoRecoveryRecord" class="record">
+        <view class="recordword">回收记录</view>
+        <image class="recordar" src="../../../images/icon/common/ar1.png"></image>
+    </view>
+    <view catchtap="gotoDeliverRecord" class="record">
+        <view class="recordword">发货记录</view>
+        <image class="recordar" src="../../../images/icon/common/ar1.png"></image>
+    </view>
+</view>
+<view class="collectionBox">
+    <view class="collectionTitle">我的收藏</view>
+    <view class="ipBox">
+        <view catchtap="gotoIpDetail" class="IpItem" data-info="{{item}}" wx:for="{{collectionIps}}" wx:key="this">
+            <view class="sellOut" wx:if="{{item.sellOut}}">
+                <image alt="" class="sellOutIcon" src="../../../images/icon/tag/end.png"></image>
+            </view>
+            <image alt="" class="IpImg" lazyLoad="true" mode="aspectFill" src="{{item.img}}"></image>
+            <view class="IpName">{{item.name}}</view>
+            <view class="IpDate">第{{item.boxNumber}}箱 <text>{{item.num}}/{{item.total}}</text>
+            </view>
+            <image alt="" catchtap="delCollect" class="delBtn" data-info="{{item}}"
+                src="../../../images/icon/common/i2.png"></image>
+        </view>
+    </view>
+</view>
+<recharge bind:sendRechargeMoney="getRechargeMoney" id="rechargeDialog"></recharge>
+<view catchtap="getUserInfo" class="AuthMask" wx:if="{{showAuthMask}}"></view>

@@ -1,0 +1,34 @@
+<scroll-view bindscroll="scroll" class="choseBox" scrollX="true" style="width: 100%">
+    <view class="scrollBox" style="width:{{pageArr.length*180+20}}rpx;">
+        <view catchtap="switchView" class="choseItem {{item.act}}" data-val="{{index}}" wx:for="{{pageArr}}" wx:key="this">{{item.label}}</view>
+    </view>
+</scroll-view>
+<view class="toolBox">
+    <view catchtap="sortByNo" class="NoBtn {{NoAct}}">
+		箱号
+		<image class="iconImg" lazyLoad="true" mode="aspectFill" src="../../../images/icon/other/i8.png"></image>
+    </view>
+    <view catchtap="sortByAllowance" class="allowanceBtn {{allowanceAct}}">
+		余量
+		<image class="iconImg" lazyLoad="true" mode="aspectFill" src="../../../images/icon/other/i8.png"></image>
+    </view>
+</view>
+<scroll-view bindscroll="scroll" class="caseBox" scrollY="true">
+    <view class="caseScrollBox">
+        <view catchtap="gotoIpInfo" class="caseItem" data-info="{{item}}" wx:for="{{caseData}}" wx:key="this">
+            <image class="caseIconImg" hidden="{{!item.recommend}}" lazyLoad="true" mode="aspectFill" src="../../../images/icon/other/i2.png"></image>
+            <image class="caseImg" lazyLoad="true" mode="aspectFill" src="../../../images/icon/other/i5.png"></image>
+            <view class="caseNo">{{item.No}}箱</view>
+            <view class="caseNum">剩{{item.num}}张</view>
+            <view class="caseInfoBox">
+                <view class="infoBox" wx:for="{{item.detail}}" wx:for-item="info" wx:key="this">
+                    <view class="info">{{info.type}}</view>
+                    <view class="info">{{info.num+'/'+info.total}}</view>
+                </view>
+            </view>
+            <view class="sellOut" wx:if="{{item.sellOut}}">
+                <image alt="" class="sellOutIcon" src="../../../images/icon/tag/end.png"></image>
+            </view>
+        </view>
+    </view>
+</scroll-view>

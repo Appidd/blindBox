@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "recharge": "/components/recharge/recharge"
+    }
+}

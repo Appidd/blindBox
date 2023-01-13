@@ -1,0 +1,52 @@
+<view class="topBar">
+    <input bindconfirm="searchIp" bindinput="changeSearch" class="searchBox" confirmType="search" id="searchInput" placeholder-class="searchPlace" placeholder="请输入" type="search" value="{{searchWord}}"></input>
+    <image alt="" class="searchIcon" src="../../../images/icon/common/search.png"></image>
+</view>
+<scroll-view  bindscrolltolower="requestMoreData" class="scrollBox" refresherEnabled="true" refresherTriggered="{{loading}}" scrollY="true" bindrefresherrefresh="requestReadyData">
+    <view class="bannerBox">
+        <swiper autoplay="true" circular="true" class="bannerSwiper" indicatorDots="true">
+            <swiper-item wx:for="{{banners}}" wx:key="this">
+                <view class="banner" data-info="{{item}}">
+                    <image alt="" class="bannerImg" lazyLoad="true" mode="aspectFill" src="{{item}}"></image>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view catchtap="showNoticeDialog" class="noticeBox">
+        <image alt="" class="noticeIcon" src="../../../images/icon/common/notice.png"></image>
+        <view class="noticeWord">{{noticeWord}}</view>
+    </view>
+    <scroll-view scroll-x="true" style="width: 100%;height: 180rpx;">
+        <view class="filterBox">
+        <view  data-val="{{index}}" wx:for="{{filters}}" wx:key="this" catchtap="switchView" class="filter_item {{item.act}}">
+           <image src="{{item.img}}" class="lable_img"></image>
+            <view class="lable_text">
+                {{item.lable}}
+            </view>
+        </view>
+        </view>
+    </scroll-view>
+    <view class="IpBox">
+        <view class="noMoreTips" wx:if="{{Ips.length==0}}">暂无数据...</view>
+        <view catchtap="gotoDetail" class="IpItem" data-info="{{item}}" wx:if="{{Ips.length>0}}" wx:for="{{Ips}}" wx:key="this">
+            <image alt="" class="newIcon" src="../../../images/icon/tag/new.png" wx:if="{{item.new}}"></image>
+            <view class="sellOut" wx:if="{{item.sellOut}}">
+                <image alt="" class="sellOutIcon" src="../../../images/icon/tag/end.png" lazy-load="true"></image>
+            </view>
+           
+            <image alt="" class="IpImg" lazyLoad="true" mode="aspectFill" src="{{item.img}}"></image>
+            <view class="IpName">{{item.name}}</view>
+            <view class="IpDate">{{item.date}}</view>
+            <view class="IpPrice">
+                ￥
+                <text>{{item.price}}/</text>
+                抽
+            </view>
+            <view class="IpNum">
+                {{item.num}}/{{item.total}}
+                <image alt="" class="IpIcon" src="../../../images/icon/other/i10.png"></image>
+            </view>
+        </view>
+    </view>
+    <notice id="noticeDialog" info="{{noticeWord}}" title="公告"></notice>
+</scroll-view>

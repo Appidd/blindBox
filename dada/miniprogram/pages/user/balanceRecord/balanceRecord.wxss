@@ -1,0 +1,86 @@
+.filterBox {
+    padding: 28rpx;
+    width: 100%;
+    height: 110rpx;
+    display: flex;
+    align-content: flex-end;
+    position: relative;
+    background-color: #efefef;
+}
+
+.scrollBox {
+    position: absolute;
+    top: 110rpx;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.filterItem {
+    width: auto;
+    height: 40rpx;
+    font-size: 26rpx;
+    color: #848eb2;
+    line-height: 40rpx;
+    margin-right: 28rpx;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: jtzFont;
+    position: relative;
+}
+
+.filterItem.act {
+    color: #a7d402;
+    font-size: 32rpx;
+}
+
+.filterItem.act:after {
+    content: "";
+    position: absolute;
+    bottom: -30rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+    border: 12rpx solid transparent;
+    border-top-color: #a7d402;
+}
+
+.recordItem {
+    width: 690rpx;
+    height: 120rpx;
+    border-bottom: 1px solid #848eb2;
+    margin: 0 auto;
+    padding: 0 30rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info,.num {
+    width: 50%;
+    height: 100%;
+}
+
+.num {
+    text-align: right;
+    font-size: 36rpx;
+    color: #fff;
+    font-weight: 700;
+    line-height: 120rpx;
+}
+
+.type {
+    color: #848eb2;
+    font-size: 26rpx;
+    line-height: 70rpx;
+}
+
+.time,.type {
+    width: 100%;
+    height: 50%;
+}
+
+.time {
+    color: #aaa;
+    font-size: 22rpx;
+    line-height: 50rpx;
+}

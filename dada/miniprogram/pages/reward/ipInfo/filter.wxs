@@ -1,0 +1,6 @@
+var filter={
+   filter:function(params) {
+    return params.toFixed(0)
+   }
+}
+module.exports=filter

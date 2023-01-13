@@ -1,0 +1,367 @@
+.wrap {
+    z-index: 99999;
+}
+
+.shadow,.wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.shadow {
+    background-color: rgba(0,0,0,.5);
+}
+
+.contBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 750rpx;
+    height: 1200rpx;
+    background: #f1f1f1;
+    border-radius: 28rpx 28rpx 0 0;
+}
+
+.showing {
+    -webkit-animation: showing .2s linear forwards;
+}
+@-webkit-keyframes showing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.uping {
+    -webkit-animation: uping .2s linear forwards;
+}
+
+@-webkit-keyframes uping {
+    0% {
+        transform: translate(0,1200rpx);
+    }
+
+    100% {
+        opacity: translate(0,0);
+    }
+}
+
+.hideing {
+    -webkit-animation: hideing .2s linear forwards;
+}
+
+@-webkit-keyframes hideing {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.downing {
+    -webkit-animation: downing .2s linear forwards;
+}
+
+@-webkit-keyframes downing {
+    0% {
+        transform: translate(0,0);
+    }
+
+    100% {
+        transform: translate(0,1200rpx);
+    }
+}
+
+.title {
+    width: 100%;
+    padding: 40rpx 30rpx;
+    text-align: center;
+    color: #000;
+    font-size: 34rpx;
+    font-weight: 700;
+}
+
+.titleIcon {
+    float: right;
+    width: 32rpx;
+    height: 32rpx;
+    position: relative;
+    top: -5rpx;
+}
+
+.ipBox {
+    margin: 0 auto 30rpx;
+    width: 690rpx;
+    height: auto;
+    background: #fff;
+    border-radius: 20rpx;
+    padding: 30rpx;
+    overflow: hidden;
+}
+
+.ipImg {
+    float: left;
+    width: 170rpx;
+    height: 170rpx;
+    border-radius: 10rpx;
+}
+
+.ipInfo {
+    float: right;
+    width: 430rpx;
+}
+
+.ipName {
+    font-weight: 700;
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ipName,.ipWord {
+    width: 100%;
+    font-size: 24rpx;
+    line-height: 1.7;
+}
+
+.ipWord {
+    color: #5a5a5a;
+}
+
+.ipSettle {
+    float: left;
+    width: 100%;
+    border-top: 1px solid #d8d8d8;
+    margin-top: 30rpx;
+    padding-top: 30rpx;
+    display: flex;
+}
+
+.buyNum {
+    width: 50%;
+    color: #5a5a5a;
+    font-size: 24rpx;
+}
+
+.buyNum text {
+    font-weight: 700;
+    font-size: 32rpx;
+    color: #f76102;
+}
+
+.buyTotal {
+    text-align: right;
+    width: 50%;
+    font-size: 24rpx;
+}
+
+.buyTotal text {
+    font-weight: 700;
+    font-size: 32rpx;
+    color: #f76102;
+}
+
+.orderItem {
+    width: 690rpx;
+    height: auto;
+    border-bottom: 1px solid hsla(0,0%,100%,.2);
+    margin: 0 auto 30rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+    padding: 30rpx;
+}
+
+.infoBox {
+    width: 100%;
+    overflow: hidden;
+}
+
+.headImg {
+    float: left;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+
+.row {
+    float: right;
+    width: 83%;
+}
+
+.name {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-bottom: 10rpx;
+}
+
+.name,.num {
+    font-size: 28rpx;
+    color: #000;
+    line-height: 40rpx;
+}
+
+.num {
+    float: right;
+    padding-left: 30rpx;
+}
+
+.creatTime {
+    font-size: 24rpx;
+    color: #000;
+    line-height: 34rpx;
+}
+
+.goodsBox {
+    width: 100%;
+    height: 165rpx;
+    margin-top: 20rpx;
+}
+
+.scrollBox {
+    width: 100%;
+    height: 100%;
+}
+
+.goodImg {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 20rpx;
+    margin-right: 20rpx;
+    border: 1px solid hsla(0,0%,100%,.2);
+}
+
+.goodImg:last-child {
+    margin-right: 0;
+}
+
+.priceBox {
+    position: relative;
+    width: 100%;
+    font-size: 24rpx;
+    color: #000;
+    text-align: right;
+    padding-top: 30rpx;
+    margin-top: 30rpx;
+    border-top: 1px solid #d8d8d8;
+}
+
+.priceBox text {
+    font-weight: 700;
+    font-size: 36rpx;
+    color: #f76102;
+}
+
+.paymentBox {
+    width: 690rpx;
+    height: auto;
+    padding: 30rpx;
+    margin: 0 auto 30rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+
+.paymentTitle {
+    font-size: 30rpx;
+    font-weight: 700;
+}
+
+.paymentItem {
+    width: 100%;
+    padding: 20rpx 0 30rpx;
+    border-bottom: 1px solid #d8d8d8;
+    color: #767575;
+    font-size: 28rpx;
+}
+
+.paymentItem text {
+    color: #f76102;
+    padding: 0 5rpx;
+    font-weight: 700;
+}
+
+.paymentItem:last-child {
+    border-bottom: none;
+}
+
+.paymentIcon {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.paymentChose,.paymentIcon {
+    position: relative;
+    top: 10rpx;
+}
+
+.paymentChose {
+    float: right;
+    width: 44rpx;
+    height: 44rpx;
+    background: #ececec;
+    border: 2rpx solid #cdcdcd;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.paymentIcon2 {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.payTips {
+    font-size: 24rpx;
+    color: #767575;
+    padding: 0 30rpx;
+}
+
+.payTips text {
+    color: #2377f5;
+}
+
+.payConfrimBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160rpx;
+    background-color: #fff;
+    padding: 0 30rpx;
+}
+
+.payConfrimWord {
+    font-size: 26rpx;
+    color: #000;
+    padding-top: 30rpx;
+}
+
+.payConfrimWord text {
+    font-size: 36rpx;
+    color: #f76102;
+    font-weight: 700;
+}
+
+.payConfrimBox .btn {
+    position: absolute;
+    right: 30rpx;
+    top: 20rpx;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff5123;
+    border-radius: 60rpx;
+    font-size: 28rpx;
+    color: #fff;
+    padding: 20rpx 60rpx;
+}

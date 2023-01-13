@@ -1,0 +1,1 @@
+<button bindtap="getlist">随机获取指定个数的元素</button>

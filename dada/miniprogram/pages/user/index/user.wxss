@@ -1,0 +1,374 @@
+page{
+    /* background-color: #efefef; */
+}
+
+.AuthMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+
+.infoBox {
+    width: 100%;
+    height: auto;
+    padding: 30rpx;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.headImg {
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+
+.userName {
+    max-width: 400rpx;
+    font-size: 28rpx;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 20rpx;
+}
+
+.editIcon {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.codeWord,.serviceWord {
+    display: flex;
+    position: absolute;
+    top: 60rpx;
+    right: 30rpx;
+    font-size: 36rpx;
+    color: #ff5123!important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.serviceWord image{
+    width: 55rpx;
+    height: 55rpx;
+}
+.serviceWord view{
+    margin-top: 6rpx;
+}
+.codeWord view{
+    margin-top: 1rpx;
+}
+.codeWord image{
+    margin-top: -30rpx;
+    width: 65rpx;
+    height: 65rpx;
+}
+.serviceWord {
+    top: 33rpx;
+    right: 120rpx;
+}
+
+/* .serviceImg {
+    width: 44rpx;
+    height: 44rpx;
+} */
+/* .codeIcon,.serviceIcon {
+    width: 44rpx;
+    height: 44rpx;
+    position: absolute;
+    top: 55rpx;
+    right: 25rpx;
+} */
+
+/* .serviceIcon {
+    top: 50rpx;
+    right: 100rpx;
+} */
+
+
+.openid {
+    width: 100%;
+    padding: 0 30rpx 30rpx;
+    background-color: #fff;
+}
+
+.copyBtn,.openid {
+    color: #d9322b;
+    font-size: 20rpx;
+}
+
+.copyBtn {
+    margin-right: 220rpx;
+    float: right;
+}
+
+.balanceBox0{
+    background-color: #fff;
+}
+
+.balanceBox {
+    width: 690rpx;
+    height: 100px;
+    background: #d9322b;
+    border-radius: 10rpx;
+    margin: 0 auto;
+    position: relative;
+}
+
+.balanceLabel {
+    font-size: 24rpx;
+    color: #efefef;
+    padding: 40rpx 32rpx 30rpx;
+}
+
+.balanceInfo {
+    padding: 0 32rpx;
+    display: flex;
+    align-items: center;
+}
+
+.balanceMoney {
+    font-size: 24rpx;
+    color: #fff;
+}
+
+.balanceMoney text {
+    font-size: 48rpx;
+    font-weight: 700;
+}
+
+.balanceDetailBtn {
+    color: #fff;
+    font-size: 24rpx;
+    margin-left: 40rpx;
+}
+
+.WithdrawalBtn {
+    top: 30rpx;
+    border-radius: 56rpx;
+    border: 1px solid #fff;
+    line-height: 54rpx;
+    color: #fff;
+}
+
+.RechargeBtn,.WithdrawalBtn {
+    position: absolute;
+    right: 40rpx;
+    width: 140rpx;
+    height: 56rpx;
+    text-align: center;
+    font-size: 24rpx;
+}
+
+.RechargeBtn {
+    top: 100rpx;
+    border-radius: 56rpx;
+    background-color: #ff5e2c;
+    color: #fff;
+    line-height: 56rpx;
+}
+
+.virtualBox {
+    display: flex;
+    justify-content: center;
+    padding: 60rpx 0;
+    background-color: #fff;
+}
+
+.virtualBlock {
+    display: inline-block;
+    width: auto;
+    height: 80rpx;
+    margin: 0 65rpx;
+}
+
+.virtualIcon {
+    position: absolute;
+    top: 5rpx;
+    left: 0rpx;
+    width: 80rpx;
+    height: 70rpx;
+}
+
+.virtualIcon2 {
+    position: absolute;
+    top: 5rpx;
+    left: 0;
+    width: 76rpx;
+    height: 68rpx;
+}
+
+.virtualLabel {
+    font-size: 30rpx;
+    color: #333;
+}
+
+.virtualLabel,.virtualNum {
+    font-weight: 700;
+    line-height: 42rpx;
+    padding-left: 110rpx;
+}
+
+.virtualNum {
+    font-size: 24rpx;
+    color: #858585;
+}
+
+.virtualNum text {
+    color: #ff5123;
+}
+
+.recordsBox {
+    width: 100%;
+    margin-bottom: 40rpx;
+    background-color: #fff;
+}
+
+.record {
+    /* width: 690rpx; */
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    border-bottom: 1rpx solid #efefef;
+}
+
+.record:first-child{
+    border-top: 1rpx solid #efefef;
+}
+
+.recordword {
+    margin-left: 25rpx;
+    font-size: 24rpx;
+    color: #333;
+    padding-left: 10rpx;
+}
+
+.recordar {
+    margin-right: 25rpx;
+    display: block;
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.collectionBox {
+    width: 100%;
+    height: auto;
+}
+
+.collectionTitle {
+    font-size: 28rpx;
+    font-weight: 700;
+    width: 100%;
+    color: #333;
+    padding: 10rpx 0 50rpx;
+    position: relative;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.collectionTitle:before {
+    padding-right: 20rpx;
+}
+
+.collectionTitle:after,.collectionTitle:before {
+    content: "♥";
+    color: #d44e36;
+    font-size: 26rpx;
+    display: inline-block;
+    position: relative;
+}
+
+.collectionTitle:after {
+    padding-left: 20rpx;
+}
+
+.ipBox {
+    margin: 0 auto;
+    width: 694rpx;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.IpItem {
+    width: 220rpx;
+    height: auto;
+    margin-bottom: 20rpx;
+    position: relative;
+    margin-right: 15rpx;
+}
+
+.IpItem:nth-child(3n) {
+    margin-right: 0;
+}
+
+.IpImg {
+    float: left;
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 10rpx;
+}
+
+.IpName {
+    font-size: 20rpx;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10rpx 0;
+}
+
+.IpDate,.IpName {
+    float: left;
+    width: 100%;
+}
+
+.IpDate {
+    font-size: 18rpx;
+    color: #f76102;
+    padding-bottom: 10rpx;
+}
+
+.IpDate text {
+    color: #333;
+    padding-left: 10rpx;
+}
+
+.sellOut {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 10rpx;
+    background-color: rgba(0,0,0,.6);
+    z-index: 999;
+}
+
+.sellOutIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 76rpx;
+    height: 46rpx;
+    transform: translate(-50%,-50%);
+}
+
+.delBtn {
+    position: absolute;
+    top: -10rpx;
+    right: -10rpx;
+    width: 40rpx;
+    height: 40rpx;
+    z-index: 999;
+}

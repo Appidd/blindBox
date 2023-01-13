@@ -1,0 +1,20 @@
+<view class="pickNumBox {{showAni}}" hidden="{{!pickNumShow}}">
+    <view catchtap="hidePickNumBox" class="bg"></view>
+    <view class="moveBox {{moveAni}}">
+        <view class="pickNumInfo">
+			已选<text>{{pickNum||0}}</text>/{{pickNumMax}}
+		</view>
+        <view class="pickNumInputBox">
+            <view catchtap="reducePickNum" class="reduceBtn"></view>
+            <view class="sliderBox">
+                <slider activeColor="#7d39cf" bindchanging="pickNumChange" max="{{pickNumMax}}" value="{{pickNum}}"></slider>
+            </view>
+            <view catchtap="addPickNum" class="addBtn"></view>
+        </view>
+        <view class="pickNumTips">
+            <view catchtap="hidePickNumBox" class="cencelBtn">取消</view>
+            <view class="tipsWord">{{title}}</view>
+            <view catchtap="changeChoseNum" class="confirmBtn">确认</view>
+        </view>
+    </view>
+</view>

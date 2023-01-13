@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/reward/index/index",
+    "pages/test/test",
+    "pages/reward/chose/chose",
+    "pages/reward/ipInfo/ipInfo",
+   "pages/login/login",
+    "pages/mybag/mybag",
+    "pages/user/coinRecord/coinRecord",
+    "pages/user/costRecord/costRecord",
+    "pages/user/couponList/couponList",
+    "pages/user/deliverRecord/deliverRecord",
+    "pages/user/index/user",
+    "pages/user/tradeRecord/tradeRecord",
+    "pages/user/balanceRecord/balanceRecord",
+    "pages/user/recoveryRecord/recoveryRecord",
+    "components/recovery/recovery"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#df4a44",
+    "backgroundColor": "#fff",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "嗒哒"
+  },
+  "tabBar": {
+   
+    "color": "#bfbfbf",
+    "backgroundColor": "#fff",
+    "selectedColor": "#df4a44",
+    "list": [
+      {
+        "pagePath": "pages/reward/index/index",
+        "text": "首页",
+        "iconPath": "images/icon/tab/index1.png",
+        "selectedIconPath": "images/icon/tab/index2.png"
+      },
+     
+      {
+        "pagePath": "pages/mybag/mybag",
+        "text": "赏袋",
+        "iconPath": "images/icon/tab/reward1.png",
+        "selectedIconPath": "images/icon/tab/reward2.png"
+      },
+      {
+        "pagePath": "pages/user/index/user",
+        "text": "我的",
+        "iconPath": "images/icon/tab/mine1.png",
+        "selectedIconPath": "images/icon/tab/mine2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "serviceProviderTicket": "KlFhnmrxfhtXIFSeIBspDdCWY3zEVrIrt0LSuv/5pZj7gtWf7LuhNLBJQO9T8/xz/vX+yaM2J7BQXMXpw9tx89DpfYczD3IyXz4="
+}

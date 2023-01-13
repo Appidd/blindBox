@@ -1,0 +1,30 @@
+<view catchtouchmove="stopScroll" class="wrap" hidden="{{!show}}">
+    <view catchtap="close" class="shadow {{showAni}}"></view>
+    <view class="contBox {{moveAni}}">
+        <view catchtap="close" class="title">
+			回收订单确认
+			<image class="titleIcon" src="../../images/icon/common/ar2.png"></image>
+        </view>
+        <view class="orderItem">
+            <view class="infoBox">
+                <view class="name">已选赏品</view>
+                <view class="num">共 {{goods.length}} 件</view>
+            </view>
+            <scroll-view bindscroll="scroll" class="goodsBox" scrollX="true" style="width: 100%">
+                <view class="scrollBox" style="width:{{goods.length*180+40}}rpx;">
+                    <view class="goodBox" wx:for="{{goods}}" wx:key="this">
+                        <image class="goodImg" lazyLoad="true" mode="aspectFill" src="{{item.url}}"></image>
+                        <view class="goodPrice">回收价：{{item.retrievePrice}}</view>
+                    </view>
+                </view>
+            </scroll-view>
+            <view class="priceBox">
+				小计：￥
+				<text>{{priceTotal}}</text>
+            </view>
+        </view>
+        <view class="btnBox">
+            <view catchtap="confirmRecovery" class="btn">确认寄卖</view>
+        </view>
+    </view>
+</view>

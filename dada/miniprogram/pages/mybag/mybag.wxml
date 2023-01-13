@@ -1,0 +1,47 @@
+<view class="topBox">
+  <view class="filterBox">
+    <view catchtap="switchView" class="filterItem {{item.act}}" data-val="{{index}}" wx:for="{{filters}}" wx:key="this">{{item.label}}</view>
+    <image catchtap="showDeliverBox" class="deliverBtn" src="../../images/btn/b{{filters[2].act==='act'?'1':'3'}}.png"></image>
+    <image catchtap="showNotice" class="deliverRuleBtn" src="../../images/btn/b7.png"></image>
+  </view>
+</view>
+
+<view class="choseBox">
+    共{{totalNum}}个赏品
+    <view class="choseNum">已选{{choseList.length}}个赏品</view>
+</view>
+<scroll-view bindscroll="scroll" class="goodsBox" scrollY="true" style="width: 100%">
+    <view class="noMoreTips" wx:if="{{goodList.length==0}}">暂无数据...</view>
+    <view class="block" wx:for="{{goodList}}" wx:key="this">
+        <view catchtap="showGoodList" class="titleBox" data-listindex="{{index}}">
+            <view class="title">{{item.ipName}}</view>
+            <image class="ar {{item.open?'act':''}}" src="../../images/icon/common/ar1.png"></image>
+            <view class="num orange" hidden="{{item.choseNum<=0}}">已选 <text>{{item.choseNum}}</text> 个</view>
+            <view class="num">共 <text>{{item.total}}</text> 个赏品</view>
+        </view>
+        <view class="goodListBox" hidden="{{!item.open}}">
+            <view class="goodList">
+                <view catchtap="choseGood" class="goodInfo" data-goodindex="{{goodIndex}}" data-listindex="{{index}}" wx:for="{{item.goods}}" wx:for-index="goodIndex" wx:for-item="good" wx:key="this">
+                    <image class="goodImg" lazyLoad="true" mode="aspectFill" src="{{good.url}}"></image>
+                    <view class="goodWord">{{good.type+'赏'+' '+good.name}}</view>
+
+                    <view class="iconBox2">
+                        <image class="icon2" hidden="{{!good.chose}}" src="../../images/icon/common/i1.png"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<view catchtap="choseAll" class="choseAllBtn">{{choseAllFlag?'取消':'全选'}}</view>
+<image class="btnImg" src="../../images/btn/b4.png"></image>
+<view catchtap="showDeliverBox" class="shelfBtn"></view>
+<view catchtap="showRecoveryDialog" class="recoveryBtn"></view>
+<image catchtap="requestDataAgain" class="refreshBtn" src="../../images/icon/common/refresh.png"></image>
+<deliver bindsendDeliver="awardDeliver" id="deliverDialog"></deliver>
+<recovery bindsendRecovery="awardRecovery" id="recoveryDialog"></recovery>
+<shelf bindsendShelf="awardShelf" id="shelfDialog"></shelf>
+<notice id="noticeDialog" info="{{notice.buyInfo}}" title="发货须知"></notice>
+<gotoAuth wx:if="{{showAuth}}"></gotoAuth>
+
+<notice id="noticeDialo" info="{{notice.notice}}" title="寄卖协议" bindshowclose='showhaha'></notice>

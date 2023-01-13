@@ -1,0 +1,73 @@
+.wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999999;
+}
+
+.box {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bgImg,.box {
+    position: absolute;
+    width: 750rpx;
+    height: 706rpx;
+}
+
+.bgImg {
+    top: 0;
+    left: 0;
+}
+
+.couponBox {
+    position: absolute;
+    top: 350rpx;
+    position: relative;
+    margin: 0 auto 30rpx;
+    transform: scale(.8,.8);
+}
+
+.couponBox,.couponImg {
+    left: 0;
+    width: 694rpx;
+    height: 166rpx;
+}
+
+.btn,.couponImg {
+    position: absolute;
+    top: 0;
+}
+
+.btn {
+    right: 0;
+    width: 200rpx;
+    height: 166rpx;
+    text-align: center;
+    line-height: 166rpx;
+    font-size: 40rpx;
+    font-family: jtzFont;
+}
+
+.btn,.name {
+    font-weight: 700;
+}
+
+.name {
+    font-size: 45rpx;
+    padding: 60rpx 0 30rpx 190rpx;
+}
+
+.name,.tips {
+    color: white;
+}
+
+.tips {
+    font-size: 24rpx;
+    padding-left: 190rpx;
+}

@@ -1,0 +1,181 @@
+.choseBox {
+    width: 100%;
+    height: 120rpx;
+    background-color: #fff;
+}
+
+.scrollBox {
+    display: flex;
+    height: 120rpx;
+    padding: 30rpx;
+}
+
+.choseItem {
+    width: 160rpx;
+    height: 60rpx;
+    border-radius: 60rpx;
+    background: rgba(135,189,3,.2);
+    border: 1px solid #df4a4a;
+    font-size: 24rpx;
+    color: #fff;
+    text-align: center;
+    line-height: 60rpx;
+    margin-right: 20rpx;
+}
+
+.choseItem.act {
+    background-color: #df4a4a;
+}
+
+.toolBox {
+    width: 100%;
+    height: auto;
+    padding: 0 30rpx 30rpx;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.allowanceBtn,.NoBtn {
+    float: left;
+    font-size: 24rpx;
+    color: #666;
+    padding-right: 40rpx;
+}
+
+.allowanceBtn.act,.NoBtn.act {
+    color: #f76102;
+}
+
+.iconImg {
+    position: relative;
+    top: 12rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.sellOutBtn {
+    position: relative;
+    top: 19rpx;
+    float: right;
+    color: #666;
+    font-size: 24rpx;
+}
+
+.sellOutBtn.act {
+    color: #87bd03;
+}
+
+.caseBox {
+    position: absolute;
+    top: 215rpx;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.caseScrollBox {
+    width: 710rpx;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 30rpx;
+}
+
+.caseItem {
+    width: 710rpx;
+    height: auto;
+    min-height: 170rpx;
+    background: #f6f6f6;
+    border-radius: 20rpx;
+    position: relative;
+    margin-bottom: 20rpx;
+}
+
+.caseIconImg {
+    position: absolute;
+    top: 0rpx;
+    left: 0rpx;
+    width: 76rpx;
+    height: 60rpx;
+    z-index: 9;
+    transform: scale(.7,.7);
+}
+
+.caseImg {
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+    width: 134rpx;
+    height: 120rpx;
+}
+
+.caseNo {
+    top: 50rpx;
+    font-size: 26rpx;
+    color: #df4a44;
+}
+
+.caseNo,.caseNum {
+    position: absolute;
+    left: 30rpx;
+    width: 118rpx;
+    text-align: center;
+}
+
+.caseNum {
+    top: 108rpx;
+    font-size: 20rpx;
+    color: #efefef;
+}
+
+.caseInfoBox {
+
+    padding-left: 180rpx;
+    width: 735rpx;
+    flex-wrap: wrap;
+    padding-bottom: 30rpx;
+}
+
+.caseInfoBox,.infoBox {
+    display: flex;
+
+}
+
+.infoBox {
+    margin-top: 20rpx;
+    margin-right: 10rpx;
+    width: 170rpx;
+    justify-content: space-between;
+}
+
+.infoBox:nth-child(3n) {
+    margin-right: 0;
+}
+
+.info {
+    font-size: 20rpx;
+    color: #666;
+}
+
+.info,.info:last-child {
+    width: 50%;
+}
+
+.sellOut {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    border-radius: 20rpx;
+    z-index: 999;
+}
+
+.sellOutIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 76rpx;
+    height: 46rpx;
+    transform: translate(-50%,-50%);
+}

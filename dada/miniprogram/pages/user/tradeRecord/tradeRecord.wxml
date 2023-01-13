@@ -1,0 +1,29 @@
+<view class="filterBox">
+    <view catchtap="switchView" class="filterItem {{item.act}}" data-val="{{index}}" wx:for="{{filters}}" wx:key="this">{{item.label}}</view>
+</view>
+<scroll-view bindscrolltolower="requestMoreData" class="scrollsBox" scrollY="true">
+    <view class="noMoreTips" wx:if="{{orders.length==0}}">暂无数据...</view>
+    <view class="orderItem" wx:if="{{orders.length>0}}" wx:for="{{orders}}" wx:key="this">
+        <view class="infoBox">
+            <image class="headImg" lazyLoad="true" mode="aspectFill" src="{{item.user.head||'../../../images/icon/common/head.png'}}"></image>
+            <view class="row">
+                <view class="name">{{item.user.name||'匿名用户'}}</view>
+                <view class="num">共 {{item.num}} 件</view>
+            </view>
+            <view class="row">
+                <view class="creatTime">{{item.creatTime}}</view>
+            </view>
+        </view>
+        <scroll-view bindscroll="scroll" class="goodsBox" scrollX="true" style="width: 100%">
+            <view class="scrollBox" style="width:{{item.num*180+40}}rpx;">
+                <view class="goodItem" wx:for="{{item.goods}}" wx:for-item="item2" wx:key="this">
+                    <image class="goodImg" lazyLoad="true" mode="aspectFill" src="{{item2.img}}"></image>
+                    <view class="word">{{item2.word}}</view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="priceBox">
+        成交价：<text>￥{{item.price}}</text>
+        </view>
+    </view>
+</scroll-view>

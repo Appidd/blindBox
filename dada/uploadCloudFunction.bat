@@ -1,0 +1,1 @@
+"F:\wxkf\微信web开发者工具\cli.bat" cloud functions deploy --e appid-5g3ftqxqd90fb1ce --n quickstartFunctions --r --project "G:\WeChatProjects\blind_box" --report_first && "F:\wxkf\微信web开发者工具\cli.bat" cloud functions deploy --e getsth-9gx1ca5x933e3c8c --n quickstartFunctions --r --project "G:\WeChatProjects\blind_box" --report

@@ -1,0 +1,93 @@
+.wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999999;
+}
+
+.box {
+    top: 48%;
+    left: 50%;
+    height: 1280rpx;
+    transform: translate(-50%,-50%);
+}
+
+.bgImg,.box {
+    position: absolute;
+    width: 750rpx;
+}
+
+.bgImg {
+    top: 50rpx;
+    left: 0;
+    height: 1136rpx;
+    
+     
+}
+
+.btn1 {
+    left: 80rpx;
+}
+
+.btn1,.btn2 {
+    position: absolute;
+    bottom: 10rpx;
+    width: 270rpx;
+    height: 116rpx;
+}
+
+.btn2 {
+    right: 80rpx;
+}
+
+.contBox {
+    position: absolute;
+    top: 270rpx;
+    left: 75rpx;
+    width: 635rpx;
+    height: 835rpx;
+}
+
+.scroll {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.goodBox {
+    width: 180rpx;
+    height: 210rpx;
+    margin: 0rpx 0rpx 30rpx 15rpx;
+    position: relative;
+}
+
+.goodBox:nth-child(3n) {
+    margin-left: 15rpx;
+}
+
+.goodImg,.goodTips {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 180rpx;
+    height: 180rpx;
+}
+
+.goodImg {
+    border-radius: 20rpx;
+}
+
+.word {
+    width: 180rpx;
+    color: #fffcfb;
+    font-size: 22rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-top: 190rpx;
+    text-align: center;
+}

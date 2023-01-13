@@ -1,0 +1,13 @@
+<view class="filterBox">
+    <view catchtap="switchView" class="filterItem {{item.act}}" data-val="{{index}}" wx:for="{{filters}}" wx:key="this">{{item.label}}</view>
+</view>
+<scroll-view bindscrolltolower="requestMoreData" class="scrollBox" scrollY="true">
+    <view class="noMoreTips" wx:if="{{records.length==0}}">暂无数据...</view>
+    <view class="recordItem" wx:if="{{records.length>0}}" wx:for="{{records}}" wx:key="this">
+        <view class="info">
+            <view class="type">{{item.type}}</view>
+            <view class="time">{{item.creatTime}}</view>
+        </view>
+        <view class="num">{{item.num}}</view>
+    </view>
+</scroll-view>

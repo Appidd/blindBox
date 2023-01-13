@@ -1,0 +1,7 @@
+<view catchtap="close" catchtouchmove="stopScroll" class="wrap" hidden="{{!show}}">
+    <view class="box">
+        <image class="bgImg" src="../../images/dialog/d2.png"></image>
+        <view class="num">{{num}}</view>
+        <view class="tips">{{num}}个电波币</view>
+    </view>
+</view>

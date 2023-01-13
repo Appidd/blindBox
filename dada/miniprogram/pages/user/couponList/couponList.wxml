@@ -1,0 +1,19 @@
+<view class="filterBox">
+    <view catchtap="switchView" class="filterItem {{item.act}}" data-val="{{index}}" wx:for="{{filters}}" wx:key="this">{{item.label}}</view>
+</view>
+<scroll-view bindscrolltolower="requestMoreData" class="scrollBox" scrollY="true">
+    <view class="noMoreTips" wx:if="{{couponList.length==0}}">暂无数据...</view>
+    <view class="couponBox" wx:if="couponList.length > 0" wx:for="{{couponList}}" wx:key="this">
+        <image alt="" class="couponImg" src="../../../images/coupon/{{item.type}}.png"></image>
+        <view class="name">{{item.type==='CC'?'C级合成券':item.type+'级电波券'}}<text style="margin-left:30rpx;font-size:40rpx;font-weight: 500;">X{{item.num}}</text> </view>
+        <view class="tips">可随机开出{{item.min}}-{{item.max}}赏币</view>
+        <!-- style="{{item.type=='A'?'color:#ffca55':item.type=='B'?'color:#3eb1ff':item.type=='C'?'color:#342a81':item.type=='S'?'color:8f39ff'}}" -->
+        <button class="btn" data-info="{{item}}" openType="share" wx:if="{{!item.open}}" style="{{item.type=='A'?'color:#ffca55':item.type=='B'?'color:#3eb1ff':item.type=='S'?'color:#342a81':item.type=='C'?'color:#8f39ff':''}}">分享</button>
+        <view catchtap="openCoupon" class="btn" data-info="{{item}}" wx:else style="{{item.type=='A'?'color:#ffca55':item.type=='B'?'color:#3eb1ff':item.type=='S'?'color:#342a81':item.type=='C'?'color:#8f39ff':''}}">开券</view>
+    </view>
+</scroll-view>
+<image alt="" catchtap="showNumChoseDialog" class="composeBtn" src="/images/coupon/btn.png" wx:if="{{requestType==='WAIT_SHARE'}}"></image>
+<coin id="coinDialog"></coin>
+<coupon id="couponDialog" bindshowclose='shrequest'></coupon>
+<numChose bind:sendPickNum="composeCoupon" id="numChoseDialog" pickNumMax="{{maxComposeNum}}" title="合成C级电波券 共{{CcouponNum}}张"></numChose>
+<gotoAuth wx:if="{{showAuto}}"></gotoAuth>

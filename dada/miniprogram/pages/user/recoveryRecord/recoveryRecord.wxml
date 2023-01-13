@@ -1,0 +1,26 @@
+<scroll-view bindscrolltolower="requestMoreData" scrollY="true" style="height:100%;width:100%">
+    <view class="blankBlock"></view>
+    <view class="noMoreTips" wx:if="{{orders.length==0}}">暂无数据...</view>
+    <view class="orderItem" wx:if="{{orders.length>0}}" wx:for="{{orders}}" wx:key="this">
+        <view class="infoBox">
+            <view class="row">
+                <view class="creatTime">回收时间：{{item.creatTime}}</view>
+                <view class="num">共 {{item.total}} 件</view>
+            </view>
+        </view>
+        <scroll-view bindscroll="scroll" class="goodsBox" scrollX="true" style="width: 100%">
+            <view class="scrollBox" style="width:{{item.num*180+40}}rpx;">
+                <view class="goodItem" wx:for="{{item.goods}}" wx:for-item="item2" wx:key="this">
+                    <image class="goodImg" lazyLoad="true" mode="aspectFill" src="{{item2.img}}"></image>
+                    
+                    <view class="word">{{item2.num}}件{{item2.name}}</view>
+                </view>
+            </view>
+        </scroll-view>
+        <view class="priceBox">
+        回收价：
+        <image class="priceIcon" src="../../../images/icon/pay/i6.png"></image>
+            <text>{{item.price}}</text>
+        </view>
+    </view>
+</scroll-view>

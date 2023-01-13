@@ -1,0 +1,30 @@
+<view class="filterBox">
+    <view catchtap="switchView" class="filterItem {{item.act}}" data-val="{{index}}" wx:for="{{filters}}" wx:key="this">{{item.label}}</view>
+</view>
+<scroll-view bindscrolltolower="requestMoreData" class="scrollsBox" scrollY="true">
+    <view class="noMoreTips" wx:if="{{records.length==0}}">暂无数据...</view>
+    <view class="applyItem" wx:if="{{records.length>0}}" wx:for="{{records}}" wx:key="this">
+        <view class="expressBox" wx:if="{{item.expressNo}}">
+            <view class="expressCompany">{{item.expressCompany}}</view>
+            <view class="expressNo">{{item.expressNo}}</view>
+            <view catchtap="copyExpressNo" class="copyBtn" data-no="{{item.expressNo}}">复制单号</view>
+        </view>
+        <view class="goodsNum">发货赏品{{item.total}}件</view>
+        <scroll-view bindscroll="scroll" class="goodsBox" scrollX="true" style="width: 100%">
+            <view class="scrollBox" style="width:{{item.num*180+40}}rpx;">
+                <view class="goodItem" wx:for="{{item.goods}}" wx:for-item="item2" wx:key="this">
+                
+                    <image class="goodImg" lazyLoad="true" mode="aspectFill" src="{{item2.img}}" ></image>
+                    <view class="word">{{item2.num}}件{{item2.name}}</view>
+                
+                </view>
+            </view>
+        </scroll-view>
+        <view class="infoTitle">申请时间</view>
+        <view class="infoWord">{{item.creatTime}}</view>
+        <view class="infoTitle">收货地址</view>
+        <view class="infoWord">{{item.add}}</view>
+        <view class="infoTitle" wx:if="{{item.remarks}}">备注信息</view>
+        <view class="infoWord" wx:if="{{item.remarks}}">{{item.remarks}}</view>
+    </view>
+</scroll-view>

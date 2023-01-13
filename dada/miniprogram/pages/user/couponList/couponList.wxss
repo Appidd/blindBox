@@ -1,0 +1,111 @@
+.filterBox {
+    padding: 28rpx;
+    width: 100%;
+    height: 110rpx;
+    display: flex;
+    align-content: flex-end;
+    position: relative;
+    background-color: #efefef;
+    margin-bottom: 40rpx;
+}
+
+.scrollBox {
+    padding-top: 20rpx;
+    position: absolute;
+    top: 110rpx;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.filterItem {
+    width: auto;
+    height: 40rpx;
+    font-size: 26rpx;
+    color: #848eb2;
+    line-height: 40rpx;
+    margin-right: 28rpx;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: jtzFont;
+    position: relative;
+}
+
+.filterItem.act {
+    padding: 0rpx 20rpx;
+    text-align: center;
+    border-radius: 25rpx;
+    /* width: 60rpx; */
+    color: white;
+    font-size: 30rpx;
+    background-color: #cf4f34;
+}
+
+.filterItem.act:after {
+    content: "";
+    position: absolute;
+    bottom: -26rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+    border: 15rpx solid transparent;
+    border-top-color: #cf4f34;
+}
+
+.couponBox {
+    width: 694rpx;
+    height: 166rpx;
+    position: relative;
+    margin: 0 auto 30rpx;
+}
+
+.couponImg {
+    left: 0;
+    width: 694rpx;
+}
+
+.btn,.couponImg {
+    position: absolute;
+    top: 0;
+    height: 166rpx;
+}
+
+.btn {
+    right: 0;
+    width: 200rpx;
+    text-align: center;
+    line-height: 166rpx;
+    font-size: 40rpx;
+    font-family: jtzFont;
+}
+
+.btn,.name {
+    font-weight: 600;
+    /* font-family: ; */
+}
+
+.name {
+    /* height: 60rpx; */
+    /* margin-top: -30rpx; */
+    
+    font-size: 35rpx;
+    padding: 30rpx 0 30rpx 190rpx;
+}
+
+.name,.tips {
+    color: white;
+}
+
+.tips {
+    font-size: 24rpx;
+    padding-left: 190rpx;
+}
+
+.composeBtn {
+    position: fixed;
+    bottom: 100rpx;
+    left: 50%;
+    width: 424rpx;
+    height: 136rpx;
+    margin-left: -212rpx;
+    transform: scale(.7,.7);
+}

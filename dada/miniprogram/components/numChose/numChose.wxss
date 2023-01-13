@@ -1,0 +1,214 @@
+.pickNumBox {
+    position: fixed;
+    z-index: 99999999999999;
+    opacity: 0;
+}
+
+.bg,.pickNumBox {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.bg {
+    position: absolute;
+    background-color: rgba(0,0,0,.6);
+}
+
+.moveBox {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 680rpx;
+}
+
+.moveBox,.pickNumInputBox {
+    position: absolute;
+    background-color: #fff;
+}
+
+.pickNumInputBox {
+    top: 180rpx;
+    left: 30rpx;
+    width: 680rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.reduceBtn {
+    position: relative;
+    width: 100rpx;
+}
+
+.reduceBtn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 47rpx;
+    left: 25rpx;
+    width: 50rpx;
+    height: 5rpx;
+    background-color: #90939d;
+}
+
+.addBtn {
+    position: relative;
+    width: 100rpx;
+}
+
+.addBtn:before {
+    top: 47rpx;
+    left: 29rpx;
+    width: 41rpx;
+    height: 5rpx;
+}
+
+.addBtn:after,.addBtn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #90939d;
+}
+
+.addBtn:after {
+    top: 29rpx;
+    left: 47rpx;
+    width: 5rpx;
+    height: 41rpx;
+}
+
+.sliderBox {
+    position: relative;
+    top: 10rpx;
+    width: 450rpx;
+    height: 100rpx;
+}
+
+.pickNumInfo {
+    position: absolute;
+    top: 100rpx;
+    left: 0;
+    width: 100%;
+    font-size: 28rpx;
+    color: #393837;
+    text-align: center;
+    letter-spacing: 5rpx;
+}
+
+.pickNumInfo text {
+    color: #29b867;
+}
+
+.weui-input {
+    margin: 0 30rpx;
+    padding: 20rpx;
+    border-bottom: 1px solid #393837;
+}
+
+.pickNumTips {
+    position: absolute;
+    bottom: 600rpx;
+    left: 0;
+    width: 100%;
+    height: 100rpx;
+    padding: 20rpx 30rpx;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9;
+    background-color: #fff;
+}
+
+.cencelBtn {
+    color: #aaa;
+    border: 2rpx solid #aaa;
+    border-radius: 5rpx;
+}
+
+.cencelBtn,.confirmBtn {
+    width: 100rpx;
+    height: 50rpx;
+    font-size: 18rpx;
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.confirmBtn {
+    color: #fff;
+    background-color: #7d39cf;
+    border-radius: 10rpx;
+}
+
+.tipsWord {
+    width: 300rpx;
+    height: 40rpx;
+    text-align: center;
+    font-size: 22rpx;
+    line-height: 50rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tipsWord text {
+    padding-left: 15rpx;
+    font-size: 20rpx;
+    color: #393837;
+}
+
+.showing {
+    -webkit-animation: showing .2s linear forwards;
+}
+
+@-webkit-keyframes showing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.uping {
+    -webkit-animation: uping .2s linear forwards;
+}
+
+@-webkit-keyframes uping {
+    0% {
+        transform: translate(0,680rpx);
+    }
+
+    100% {
+        opacity: translate(0,0);
+    }
+}
+
+.hideing {
+    -webkit-animation: hideing .2s linear forwards;
+}
+
+@-webkit-keyframes hideing {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.downing {
+    -webkit-animation: downing .2s linear forwards;
+}
+
+@-webkit-keyframes downing {
+    0% {
+        transform: translate(0,0);
+    }
+
+    100% {
+        transform: translate(0,680rpx);
+    }
+}

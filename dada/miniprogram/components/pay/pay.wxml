@@ -1,0 +1,68 @@
+<view catchtouchmove="stopScroll" class="wrap" hidden="{{!show}}">
+    <view catchtap="close" class="shadow {{showAni}}"></view>
+    <view class="contBox {{moveAni}}">
+        <view catchtap="close" class="title">
+			订单确认
+			<image class="titleIcon" src="../../images/icon/common/ar2.png"></image>
+        </view>
+        <view class="ipBox" wx:if="{{!showList}}">
+            <image class="ipImg" src="{{IpInfo.image}}" mode="aspectFill"></image>
+            <view class="ipInfo">
+                <view class="ipName">{{IpInfo.name}}</view>
+                <view class="ipWord">名称：明信片</view>
+                <view class="ipWord">单价：{{IpInfo.price}}元</view>
+                <view class="ipWord">数量：{{IpInfo.buyNum}}</view>
+            </view>
+            <view class="ipSettle">
+                <view class="buyNum">
+                    <text>明信片</text> x {{IpInfo.buyNum}}</view>
+                <view class="buyTotal">小计:￥<text>{{IpInfo.buyNum*IpInfo.price}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="orderItem" wx:else>
+            <view class="infoBox">
+                <image class="headImg" lazyLoad="true" mode="aspectFill" src="{{OrderInfo.user.head}}"></image>
+                <view class="row">
+                    <view class="name">{{OrderInfo.user.name}}</view>
+                    <view class="num">共 {{OrderInfo.num}} 件</view>
+                </view>
+                <view class="row">
+                    <view class="creatTime">{{OrderInfo.creatTime}}</view>
+                </view>
+            </view>
+            <scroll-view bindscroll="scroll" class="goodsBox" scrollX="true" style="width: 100%">
+                <view class="scrollBox" style="width:{{OrderInfo.goods.length*180+40}}rpx;">
+                    <image class="goodImg" lazyLoad="true" mode="aspectFill" src="{{item.img}}" wx:for="{{OrderInfo.goods}}" wx:key="this"></image>
+                </view>
+            </scroll-view>
+            <view class="priceBox">
+				小计：<text>￥{{OrderInfo.price}}</text>
+            </view>
+        </view>
+        <view class="paymentBox">
+            <view class="paymentTitle">支付方式</view>
+            <view catchtap="choseCoinDeduction" class="paymentItem" wx:if="{{!showList}}">
+                <image class="paymentIcon" src="../../images/icon/pay/i1.png"></image>
+				使用DD币¥<text>{{deductionCoin}}</text>（剩余:<text>{{userAccountInfo.coin}}</text>）
+				<view class="paymentChose">
+                    <image class="paymentIcon2" hidden="{{!choseCoin}}" src="../../images/icon/common/i1.png"></image>
+                </view>
+            </view>
+            <view catchtap="choseAmountDeduction" class="paymentItem">
+                <image class="paymentIcon" src="../../images/icon/pay/i3.png"></image>
+				使用余额¥<text>{{deductionAmount}}</text>（余额:<text>{{userAccountInfo.canUseAmount}}</text>）
+				<view class="paymentChose">
+                    <image class="paymentIcon2" hidden="{{!choseAmount}}" src="../../images/icon/common/i1.png"></image>
+                </view>
+            </view>
+        </view>
+        <view catchtap="showBuyRule" class="payTips">下单购买即表示同意<text>《用户服务协议条款》</text>
+        </view>
+        <view class="payConfrimBox">
+            <view class="payConfrimWord">总计：<text>¥{{payTotal}}</text>
+            </view>
+            <view catchtap="gotoPay" class="btn">确认支付</view>
+        </view>
+    </view>
+</view>

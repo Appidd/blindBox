@@ -1,0 +1,23 @@
+<view catchtouchmove="stopScroll" class="wrap" hidden="{{!show}}">
+    <view catchtap="close" class="shadow {{showAni}}"></view>
+    <view class="contBox {{moveAni}}">
+        <view catchtap="close" class="title">
+			余额充值
+			<image class="titleIcon" src="../../images/icon/common/ar2.png"></image>
+        </view>
+        <view class="inputBox">
+            <view class="inputLabel">选择充值金额</view>
+            <view class="itemBox">
+                <view catchtap="choseMoney" class="item" data-money="{{item}}" wx:for="{{[100,200,500]}}" wx:key="this">￥<text>{{item}}</text>
+                </view>
+            </view>
+        </view>
+        <view class="inputBox">
+            <view class="inputLabel">输入充值金额</view>
+            <input bindinput="changeInput" class="inputCont" id="inputCont" placeholder="输入金额，最低1元" type="number" value="{{money}}"></input>
+        </view>
+        <view class="btnBox">
+            <view catchtap="sendRechargeMoney" class="btn">确认充值</view>
+        </view>
+    </view>
+</view>

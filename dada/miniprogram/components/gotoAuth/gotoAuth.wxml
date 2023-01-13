@@ -1,0 +1,4 @@
+<view class="box">
+    <view class="tips">登陆进行更多操作</view>
+    <view catchtap="gotoLogin" class="btn">去登录</view>
+</view>

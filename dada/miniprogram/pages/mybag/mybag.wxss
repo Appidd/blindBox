@@ -1,0 +1,285 @@
+page{
+    background-color: #f6f6f6;
+}
+
+.topBox{
+    background-color: #fff;
+    height: 80rpx;
+    padding: 25rpx;
+}
+
+.filterBox {
+    width: 700rpx;
+    display: flex;
+    align-content: flex-end;
+    position: relative;
+}
+
+.filterItem {
+    flex-shrink: 0;
+    /* padding: 10rpx 15rpx; */
+    /* width: 100rpx; */
+    height: 50rpx;
+    font-size: 30rpx;
+    color: #df4a44;
+    line-height: 50rpx;
+    margin-right: 28rpx;
+    cursor: pointer;
+    font-weight: 700;
+    /* font-family: jtzFont; */
+    position: relative;
+    margin-left: 10rpx;
+}
+
+
+.filterItem.act {
+    padding: 0rpx 20rpx;
+    border-radius: 25rpx;
+    /* width: 60rpx; */
+    color: white;
+    font-size: 30rpx;
+    background-color: #cf4f34;
+    
+}
+
+.filterItem.act:after {
+    content: "";
+    position: absolute;
+    bottom: -29rpx;
+    left: 50%;
+    transform: translate(-50%,0);
+    border: 15rpx solid transparent;
+    border-top-color: #cf4f34;
+}
+
+.deliverRuleBtn {
+    position: absolute;
+    right: 180rpx;
+    top: 20rpx;
+    width: 112rpx;
+    height: 30rpx;
+}
+
+.deliverBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 160rpx;
+    height: 60rpx;
+}
+
+.choseBox {
+    padding: 40rpx 40rpx 40rpx 30rpx;
+    font-size: 24rpx;
+    color: #df4a44;
+    background-color: #fff;
+}
+
+.refreshBtn {
+    position: fixed;
+    bottom:300rpx;
+    right: 39rpx;
+    width: 70rpx;
+    height: 70rpx;
+    z-index: 99999;
+}
+
+.choseNum {
+    float: right;
+    font-size: 24rpx;
+    color: #df4a44;
+}
+
+.goodsBox {
+    position: absolute;
+    top: 180rpx;
+    left: 0;
+    right: 0;
+    bottom: 150rpx;
+}
+
+.btnImg {
+    width: 274rpx;
+    margin-left: -137rpx;
+}
+
+.btnImg,.recoveryBtn {
+    position: fixed;
+    right: 40rpx;
+   
+    bottom: 200rpx;
+    left: 50%;
+    height: 60rpx;
+}
+
+.recoveryBtn,.shelfBtn {
+    position: fixed;
+    right: 40rpx;
+    z-index: 99999;
+    bottom: 200rpx;
+    width: 137rpx;
+
+  
+}
+
+.shelfBtn {
+/* background-color: red; */
+    left: 50%;
+    height: 68rpx;
+    margin-left: -137rpx;
+}
+
+.block {
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #efefef;
+}
+
+.titleBox {
+    width: 100%;
+    padding: 30rpx;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.iconBox {
+    float: left;
+    background-color: #fff;
+    border-radius: 5rpx;
+    overflow: hidden;
+}
+
+.icon,.iconBox {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.title {
+    float: left;
+    color: #df4a44;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    width: 270rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ar {
+    float: right;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.ar.act {
+    transform: rotate(90deg);
+}
+
+.num {
+    float: right;
+    color: #858585;
+    line-height: 40rpx;
+    font-size: 24rpx;
+    padding-right: 10rpx;
+}
+
+.num text {
+    color: #f76102;
+    font-size: 26rpx;
+}
+
+.orange {
+    color: #f76102;
+}
+
+.goodList,.goodListBox {
+    width: 100%;
+    height: auto;
+}
+
+.goodList {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 30rpx;
+    background-color: #fff;
+}
+
+.goodInfo {
+    width: 140rpx;
+    height: auto;
+    margin: 0 40rpx 30rpx 0;
+    position: relative;
+}
+
+.goodInfo:nth-child(4n) {
+    margin-right: 0;
+}
+
+.goodImg {
+    width: 140rpx;
+    height: 140rpx;
+}
+
+.goodWord {
+    font-size: 20rpx;
+    color: #df4a44;
+    line-height: 40rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.goodTimeWord {
+    font-size: 18rpx;
+    color: #ff5123;
+    line-height: 25rpx;
+}
+
+.iconBox2 {
+    position: absolute;
+    top: 10rpx;
+    right: 10rpx;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.icon2,.iconBox2 {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140rpx;
+    height: 140rpx;
+    background-color: rgba(0,0,0,.6);
+    z-index: 9;
+}
+
+.choseAllBtn {
+    position: fixed;
+    right: 40rpx;
+    z-index: 99999;
+    bottom: 200rpx;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20rpx;
+    width: 68rpx;
+    height: 68rpx;
+    line-height: 68rpx;
+    text-align: center;
+    letter-spacing: 3rpx;
+    background-color: #ff5d50;
+}
+
+.AuthMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999999999;
+}

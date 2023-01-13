@@ -1,0 +1,109 @@
+{
+  "setting": {
+    "compileHotReLoad": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/reward/ipInfo/ipInfo",
+          "pathName": "pages/reward/ipInfo/ipInfo",
+          "query": "item=%5Bobject%20Object%5D",
+          "scene": null
+        },
+        {
+          "name": "index",
+          "pathName": "pages/reward/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "market",
+          "pathName": "pages/market/market",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "mybag",
+          "pathName": "pages/mybag/mybag",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "recoveryRecord",
+          "pathName": "pages/user/recoveryRecord/recoveryRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "deliverRecord",
+          "pathName": "pages/user/deliverRecord/deliverRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/user/index/user",
+          "pathName": "pages/user/index/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "costRecord",
+          "pathName": "pages/user/costRecord/costRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "recoveryRecord",
+          "pathName": "pages/user/recoveryRecord/recoveryRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "coinRecord",
+          "pathName": "pages/user/coinRecord/coinRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "couponList",
+          "pathName": "pages/user/couponList/couponList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "couponList",
+          "pathName": "pages/user/couponList/couponList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "coinRecord",
+          "pathName": "pages/user/coinRecord/coinRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "test",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "login",
+          "pathName": "pages/login/login",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "projectname": "dada",
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+}

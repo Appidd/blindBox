@@ -1,0 +1,51 @@
+view {
+  word-break: break-word;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-origin: padding-box;
+  background-clip: padding-box;
+  line-height: 1;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+page {
+  background-color: #fff;
+  height: 100%;
+}
+
+view[hidden] {
+  display: none!important;
+}
+
+.noMoreTips {
+  width: 100%;
+  padding-top: 30rpx;
+  font-size: 40rpx;
+  color: #919191;
+  text-align: center;
+  /* font-family: jtzFont; */
+}
+
+/* @font-face {
+  font-family:jtzFont;src:url("https://6765-getsth-9gx1ca5x933e3c8c-1306381533.tcb.qcloud.la/font_famliy/jtz.ttf?sign=c4021f767318c73476d48e357a5935f1&t=1635586473");
+} */
+
+.article,page {
+  width: 100%;
+  height: 100%;
+}
+
+.article {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+button {
+  border: none!important;
+  background: none!important;
+  padding: 0!important;
+}

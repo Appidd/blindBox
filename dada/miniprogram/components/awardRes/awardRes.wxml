@@ -1,0 +1,19 @@
+<view catchtouchmove="stopScroll" class="wrap" hidden="{{!show}}" animation="{{animationData}}">
+    <view class="box">
+        <image class="bgImg" src="../../images/dialog/d5.png"></image>
+        <scroll-view class="contBox" scrollY="{{true}}">
+            <view class="scroll">
+                <view class="goodBox" wx:for="{{goods}}" wx:key="this" animation="{{animationData}}">
+                    <image class="goodImg" src="{{item.img}}"></image>
+                    <!-- <image class="goodTips" src="../../images/icon/common/awardm.png" wx:if="{{item.price>=20}}"></image>
+                    <image class="goodTips" src="../../images/icon/common/award.png" wx:if="{{item.price>=50}}"></image> -->
+                    <view class="word">{{item.type}}{{item.name}}</view>
+                    <!-- <view class="word">{{item.name}}{{item.price}}</view>
+                     -->
+                </view>
+            </view>
+        </scroll-view>
+        <image catchtap="gotoMybag" class="btn1" src="../../images/btn/aaa.png"></image>
+        <image catchtap="close" class="btn2" src="../../images/btn/bbb.png"></image>
+    </view>
+</view>

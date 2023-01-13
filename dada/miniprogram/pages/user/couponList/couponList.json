@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "coin": "/components/coin/coin",
+        "coupon": "/components/coupon/coupon",
+        "gotoAuth": "/components/gotoAuth/gotoAuth",
+        "numChose": "/components/numChose/numChose"
+    },
+    "navigationBarTitleText": "嗒哒券"
+}

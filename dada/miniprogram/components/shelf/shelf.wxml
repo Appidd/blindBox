@@ -1,0 +1,27 @@
+<view catchtouchmove="stopScroll" class="wrap" hidden="{{!show}}">
+    <view catchtap="close" class="shadow {{showAni}}"></view>
+    <view class="contBox {{moveAni}}">
+        <view catchtap="close" class="title">
+			发布单确认
+			<image class="titleIcon" src="../../images/icon/common/ar2.png"></image>
+        </view>
+        <view class="orderItem">
+            <view class="infoBox">
+                <view class="name">已选赏品</view>
+                <view class="num">共 {{goods.length}} 件</view>
+            </view>
+            <scroll-view bindscroll="scroll" class="goodsBox" scrollX="true" style="width: 100%">
+                <view class="scrollBox" style="width:{{goods.length*180+40}}rpx;">
+                    <image class="goodImg" lazyLoad="true" mode="aspectFill" src="{{item.url}}" wx:for="{{goods}}" wx:key="this"></image>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="inputBox">
+            <view class="inputLabel">一口价定价</view>
+            <input bindinput="changeInput" class="inputCont" id="inputCont" placeholder="输入价格，最低1元" type="number" value="{{money}}"></input>
+        </view>
+        <view class="btnBox">
+            <view catchtap="shelfAard" class="btn">确认发布</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,49 @@
+.wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999999;
+}
+
+.box {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.bgImg,.box {
+    position: absolute;
+    width: 750rpx;
+    height: 706rpx;
+}
+
+.bgImg {
+    top: 0;
+    left: 0;
+}
+
+.num {
+    top: 380rpx;
+    left: 460rpx;
+    width: 500rpx;
+    font-size: 88rpx;
+    color: #f9f9f9;
+}
+
+.num,.tips {
+    position: absolute;
+    font-weight: 700;
+}
+
+.tips {
+    top: 550rpx;
+    left: 0;
+    width: 100%;
+    font-size: 44rpx;
+    color: #f8e39c;
+    text-align: center;
+    letter-spacing: 4rpx;
+}

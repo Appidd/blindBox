@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "notice": "/components/notice/notice",
+        "pay": "/components/pay/pay",
+        "awardRes": "/components/awardRes/awardRes",
+        "gotoAuth": "/components/gotoAuth/gotoAuth"
+    }
+}

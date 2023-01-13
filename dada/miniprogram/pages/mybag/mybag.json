@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "deliver": "/components/deliver/deliver",
+        "shelf": "/components/shelf/shelf",
+        "recovery": "/components/recovery/recovery",
+        "notice": "/components/notice/notice",
+        "gotoAuth": "/components/gotoAuth/gotoAuth"
+    }
+}

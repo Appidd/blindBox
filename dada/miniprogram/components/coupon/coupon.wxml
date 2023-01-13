@@ -1,0 +1,10 @@
+<view catchtouchmove="stopScroll" class="wrap" hidden="{{!show}}">
+    <view class="box">
+        <image class="bgImg" src="../../images/dialog/d3.png"></image>
+        <view catchtap="close" class="couponBox">
+            <image alt="" class="couponImg" src="../../images/coupon/{{couponType}}.png"></image>
+            <view class="name">{{coupon.type}}级电波券</view>
+            <view class="btn">去开券</view>
+        </view>
+    </view>
+</view>

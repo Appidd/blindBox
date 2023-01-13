@@ -1,0 +1,36 @@
+<view catchtouchmove="stopScroll" class="wrap" hidden="{{!show}}">
+    <view catchtap="close" class="shadow {{showAni}}"></view>
+    <view class="contBox {{moveAni}}">
+        <view catchtap="close" class="title">
+			发货订单确认
+			<image class="titleIcon" src="../../images/icon/common/ar2.png"></image>
+        </view>
+        <view class="orderItem">
+            <view class="infoBox">
+                <view class="name">已选赏品</view>
+                <view class="num">共 {{goods.length}} 件</view>
+            </view>
+            <scroll-view bindscroll="scroll" class="goodsBox" scrollX="true" style="width: 100%">
+                <view class="scrollBox" style="width:{{goods.length*180+40}}rpx;">
+                    <image class="goodImg" lazyLoad="true" mode="aspectFill" src="{{item.url}}" wx:for="{{goods}}" wx:key="this"></image>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="choseBox">
+            <view catchtap="getUserAdd" class="record">
+                <view class="recordword">选择收货地址</view>
+                <image class="recordar" src="../../images/icon/common/ar2.png"></image>
+            </view>
+            <view class="record" hidden="{{!choseAddress}}">
+                <text>已选地址：
+{{address.provinceName+address.cityName+address.countyName+address.detailInfo+'，'+address.telNumber+'，'+address.userName}}</text>
+            </view>
+            <view class="choseTips1">顺丰速运 （满5件赏品包邮）</view>
+            <view class="choseTips2">如果不满5件赏品，需支付{{postage||10}}元运费</view>
+            <textarea bindinput="changeInput" class="choseInput" placeholder="备注" value="{{message}}"></textarea>
+        </view>
+        <view class="btnBox">
+            <view catchtap="confirmDeliver" class="btn">确认发货</view>
+        </view>
+    </view>
+</view>

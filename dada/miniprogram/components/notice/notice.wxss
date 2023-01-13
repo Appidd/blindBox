@@ -1,0 +1,58 @@
+.noticeWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.5);
+    z-index: 999999;
+}
+
+.box {
+    width: 600rpx;
+    height: 850rpx;
+    background-color: rgb(219, 47, 47);
+}
+
+.box,.cont {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.cont {
+    width: 580rpx;
+    height: 830rpx;
+    border: 2rpx solid #7a5c3d;
+}
+
+.title {
+    font-size: 48rpx;
+    color: #f9f9f9;
+    font-weight: 700;
+    font-family: jtzFont;
+    padding: 30rpx 40rpx 40rpx;
+}
+
+.wordBox {
+    width: 100%;
+    height: 570rpx;
+}
+
+.word {
+    font-size: 26rpx;
+    color: #fff;
+    padding: 0 40rpx;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.closeBtn {
+    width: 100%;
+    color: #f9f9f9;
+    font-size: 30rpx;
+    text-align: center;
+    line-height: 2;
+    padding-top: 30rpx;
+}

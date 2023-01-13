@@ -1,0 +1,13 @@
+<view catchtouchmove="stopScroll" class="noticeWrap" hidden="{{!show}}">
+    <view class="box">
+        <view class="cont">
+            <view class="title">{{title}}</view>
+            <scroll-view class="wordBox" scrollY="{{true}}">
+                <view class="word">
+                    <text>{{info}}</text>
+                </view>
+            </scroll-view>
+            <view catchtap="close" class="closeBtn">关闭</view>
+        </view>
+    </view>
+</view>

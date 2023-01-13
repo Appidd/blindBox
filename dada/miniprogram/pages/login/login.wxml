@@ -1,0 +1,11 @@
+<!-- <image class="bgcImg" lazyLoad="true" mode="widthFix" src="../../images/icon/logo/bg.png"></image> -->
+<view class="allBox">
+    <!-- <view class="authorizationItem">
+        <text class="{{!hasUser?'text':'has'}}">授权微信基础信息</text>
+        <view class="text">授权手机号</view>
+        <view class="text">以查看更多内容</view>
+    </view>
+    <button bindtap="getUserInfo"  wx:if="{{!hasUser}}">确认授权</button>
+    <button bindgetphonenumber="getphone"  openType="getPhoneNumber"  wx:if="{{hasUser}}">确认授权手机</button> -->
+
+</view>

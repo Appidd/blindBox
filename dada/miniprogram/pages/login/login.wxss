@@ -1,0 +1,47 @@
+page {
+    overflow: hidden;
+   background: #df4a44;
+}
+
+.allBox,page {
+    height: 100%;
+    width: 100%;
+}
+
+.allBox {
+    position: absolute;
+    z-index: 999;
+    bottom: 100rpx;
+    height: 300rpx;
+  
+    /* background-color: gray; */
+}
+.bgcImg{
+    width: 100%;
+    z-index: -999;
+}
+.authorizationItem{
+    color:white;
+    margin-left: 30rpx;
+    font-size: 28rpx;
+}
+.text{
+    margin-top: 10rpx;
+}
+.has{
+    color: rgb(36, 70, 36);
+}
+button{
+    margin-top: 50rpx;
+    width:650rpx;height:76rpx;line-height:76rpx;
+    border: 1rpx solid white !important;
+    border-radius: 38rpx;
+    color: white;
+}
+
+
+
+
+
+
+

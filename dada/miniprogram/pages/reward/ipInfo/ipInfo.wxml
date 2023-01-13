@@ -1,0 +1,93 @@
+<wxs module="filter" src='../ipInfo/filter.wxs'></wxs>
+<view class="topToolBox">
+    <image catchtap="showRule" class="buyRuleBtn" src="../../../images/btn/b8.png"></image>
+    <view class="boxInfo">
+        <text>{{currentBoxNo}}/{{IpInfo.allBox}}</text>
+        <image class="boxIcon" src="../../../images/icon/other/i10.png"></image>
+    </view>
+    <image catchtap="gotoMybag" class="myBagBtn" src="../../../images/btn/b2.png"></image>
+</view>
+<view class="ipInfoBox">
+    <image catchtap="previewImage" class="ipImg" data-img="{{IpInfo.image}}" lazyLoad="true" mode="aspectFill" src="{{IpInfo.image}}"></image>
+    <view class="ipInfo">
+        <view class="ipName">{{IpInfo.name}}</view>
+        <view class="ipDate">{{IpInfo.date}}</view>
+        <view class="ipPrice">￥<text>{{IpInfo.price}}/</text>抽</view>
+        <view class="ipNumBox">
+            <view class="ipNum">当前第<text>{{currentBoxNo}}</text>套，共{{IpInfo.allBox}}套</view>
+            <view catchtap="changeCase" class="changeBtn">
+                <image class="changeIcon" src="../../../images/icon/other/i3.png"></image>
+                <text>换箱</text>
+            </view>
+        </view>
+        <view catchtap="collectionIp" class="collectionBtn" >收藏</view>
+       <!-- <view class="havecollect" wx:else>已收藏</view> -->
+    </view>
+</view>
+<view class="filterBox">
+    <view catchtap="switchView" class="filterItem {{item.act}}" data-val="{{index}}" wx:for="{{filters}}" wx:key="this">{{item.label}}</view>
+    <view class="goodNumBox">剩余 <text>{{awardInventory}}</text> /{{awardTotal}}张</view>
+</view>
+<view class="switchBox">
+    <scroll-view class="goodsScroll" hidden="{{!goodImgShow}}" scrollY="true" style="width: 100%">
+        <view class="goodsBox">
+            <view catchtap="previewImage" class="goodItem" data-img="{{item.img}}" data-item="{{item}}" wx:for="{{goods}}" wx:key="this">
+                <view class="sellOut" wx:if="{{item.sellOut}}">
+                    <image alt="" class="sellOutIcon" src="../../../images/icon/tag/end.png"></image>
+                </view>
+                <image alt="" class="goodImg" lazyLoad="true" mode="aspectFill" src="{{item.img}}"></image>
+                <view class="goodNum">{{item.type}} <view class="goodName">{{item.name}}</view>
+                </view>
+                <view class="goodNum pdt">{{item.probability}}<text>{{item.num}}/{{item.total}}</text>
+                </view>
+                <view class="goodPrice" wx:if="{{item.type=='FIRST赏'||item.type=='LAST赏'}}">只赠送不售卖</view>
+                <view class="goodPrice" wx:else>官方零售价：{{IpInfo.price}}元</view>
+            </view>
+        </view>
+    </scroll-view>
+    <scroll-view class="goodsScroll" hidden="{{!goodInfoShow}}" scrollY="true" style="width: 100%">
+        <view class="goodsInfoBox">
+            <view class="goodInfoItem {{item.sellOut?'wordGray':''}}" wx:for="{{goods}}" wx:key="this">
+                <view class="infoCont">{{item.type}}</view>
+                <view class="infoCont">{{item.num}}/{{item.total}}</view>
+                <view class="infoCont">{{item.name}}</view>
+                <view class="infoCont">{{item.probability}}</view>
+            </view>
+        </view>
+    </scroll-view>
+    <scroll-view bindscrolltolower="requestMoreAwardListData" class="goodsScroll" hidden="{{!awardListShow}}" scrollY="true" style="width: 100%">
+        <view class="noMoreTips" wx:if="{{awardList.length==0}}">暂无数据...</view>
+        <view class="awardBox" wx:else>
+            <block wx:for="{{awardList}}"  wx:key="this">
+
+                <view class="awardItem" style="{{item.type=='LAST'||item.type=='FIRST'?'background-image: linear-gradient(to right,#fff,#ff6102,#fff);border-bottom:1rpx solid #fff':''}}"  wx:key="this">
+                    <image class="headImg" src="{{item.head||'../../../images/icon/common/head.png'}}"></image>
+                    <view class="awardInfo">
+                        <view class="awardInfoblock">
+                            <view class="awardInfoWord">{{item.name}}</view>
+                            <view class="awardInfoWord">{{item.type}}赏</view>
+                        </view>
+                        <view class="awardInfoblock">
+                            <view class="awardInfoWord">{{item.getTime}}</view>
+                            <view class="awardInfoWord">{{item.goodName}}</view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+
+        </view>
+    </scroll-view>
+</view>
+<view class="btnBox">
+    <view catchtap="showPay" class="lotteyBtn" data-num="{{item}}" wx:for="{{lotteryNum}}" wx:key="this">
+        <image class="lotteyBtnImg" src="../../../images/awardBtn/i{{index+1}}.png"></image>
+        <view class="lotteyPrice">￥<text>{{filter.filter(item*IpInfo.price)||0}}</text> </view>
+    </view>
+</view>
+
+<image catchtap="requestReadyData" class="refreshBtn" src="../../../images/icon/common/refresh.png"></image>
+<pay bind:payConfirm="payConfirm" bind:showBuyRule="showBuyRule" id="payTool" showList="{{false}}"></pay>
+<awardRes id="awardResDialog"></awardRes>
+<gotoAuth wx:if="{{showAuto}}"></gotoAuth>
+<view catchtap="showAuthBox" class="AuthMask" wx:if="{{showAuthMask}}"></view>
+<notice id="noticeDialog" info="{{noticeWord}}" title="{{noticeTitle}}"></notice>
